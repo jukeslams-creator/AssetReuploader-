@@ -1,0 +1,155 @@
+================================================================================
+                    ASSETREUPLOADER v6.0 - SETUP GUIDE
+================================================================================
+
+QUICK START (3 STEPS):
+================================================================================
+
+STEP 1: INSTALL NODE.JS
+  - Go to: https://nodejs.org/
+  - Download and install the LTS version
+  - Restart your computer
+
+STEP 2: SETUP THE BACKEND
+  - Extract this folder somewhere on your computer
+  - Open Command Prompt in this folder (Shift + Right-click → "Open PowerShell here")
+  - Run these commands:
+    
+    npm install
+    npm start
+
+  - This will start the server on http://localhost:3000
+  - Keep this window OPEN while using the plugin!
+
+STEP 3: INSTALL THE ROBLOX PLUGIN
+  - Go to: https://github.com/jukeslams-creator/AssetReuploader-
+  - Click on "AssetReuploader.rbxmx"
+  - Click "Download raw file" button (top right)
+  - Save it somewhere you can find it
+  - Open Roblox Studio
+  - Go to: File → Open
+  - Select the AssetReuploader.rbxmx file
+  - Right-click the plugin → "Save as Local Plugin"
+  - Close and reopen Roblox Studio
+  - The plugin now appears in your Plugins tab!
+
+================================================================================
+                              HOW TO USE
+================================================================================
+
+1. Start the backend server (see STEP 2 above)
+2. Open Roblox Studio with your game
+3. Click the "AssetReuploader" plugin button in the Plugins tab
+4. Paste your Roblox Open Cloud API Key
+5. Select what you want to reupload:
+   - Images
+   - Animations
+   - Meshes
+6. Click "Search" to find assets
+7. Click "Run" to start the reupload process
+8. Wait for completion!
+
+================================================================================
+                            GETTING YOUR API KEY
+================================================================================
+
+1. Go to: https://create.roblox.com/dashboard/
+2. Select your Creator (Profile or Group)
+3. Click "Open Cloud" on the left
+4. Click "Create API Key"
+5. Configure these settings:
+   - API Operations: Check "Asset operations" only
+   - Access Level: Select "Create, read, update" for assets
+   - IP Whitelist: Add your IP or use 0.0.0.0/0
+6. Generate and copy the full API key
+7. Paste it in the plugin window
+
+================================================================================
+                          WHAT'S IN THIS FOLDER
+================================================================================
+
+src.js                  - Main backend server code (Node.js)
+package.json           - Project dependencies and scripts
+README.md              - Full documentation
+.gitignore             - Git configuration
+AssetReuploader.rbxmx  - Roblox plugin file (download and install in Studio)
+start.bat              - (Optional) One-click startup script for Windows
+SETUP.txt              - This file!
+
+================================================================================
+                           TROUBLESHOOTING
+================================================================================
+
+Q: "Node.js is not installed"
+A: Download and install from https://nodejs.org/
+
+Q: "npm command not found"
+A: Node.js wasn't installed correctly. Reinstall it and restart your computer.
+
+Q: "Can't find src.js"
+A: Make sure you're in the correct folder where src.js is located.
+
+Q: "Port 3000 already in use"
+A: Another app is using port 3000. Either:
+   - Close the other app
+   - Change the PORT in src.js (line with: const PORT = process.env.PORT || 3000;)
+
+Q: "Invalid API Key"
+A: Make sure:
+   - You copied the FULL API key (not just part of it)
+   - The API key belongs to the same creator you selected
+   - The API key has "asset operations" enabled
+
+Q: "Plugin doesn't appear in Studio"
+A: 
+   - Make sure you clicked "Save as Local Plugin" (not just close)
+   - Restart Roblox Studio completely
+   - Check that AssetReuploader.rbxmx file exists
+
+Q: "Can't upload images/animations/meshes"
+A:
+   - Make sure the backend server is running (npm start)
+   - Check that http://localhost:3000 is accessible
+   - Check the server console for error messages
+
+================================================================================
+                          FEATURES IN v6.0
+================================================================================
+
+✓ Reupload images to your profile/group
+✓ Reupload animations
+✓ Reupload meshes
+✓ Handle moderated content automatically
+✓ Batch processing with rate limiting
+✓ Progress tracking
+✓ Error recovery
+✓ Better timeout management
+✓ Fixed Atomics.wait() blocking issue
+✓ Improved logging and debugging
+
+================================================================================
+                            NEED MORE HELP?
+================================================================================
+
+1. Check the README.md file in this folder
+2. Visit the GitHub repo: https://github.com/jukeslams-creator/AssetReuploader-
+3. Check the original repo: https://github.com/TylerAtStarboard/AssetReuploader
+
+================================================================================
+                          QUICK COMMAND REFERENCE
+================================================================================
+
+First time setup:
+  npm install
+
+Start the server:
+  npm start
+
+Build an executable:
+  npm install -g pkg
+  npm run build-exe
+
+================================================================================
+
+Created: 2026-07-05
+Version: 6.0 (Rewritten & Bug-Fixed)
